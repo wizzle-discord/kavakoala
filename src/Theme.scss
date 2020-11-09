@@ -1,0 +1,33 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+
+$header: #21255C;
+$body-bg: #F4F8FF;
+$body-color: #ffffff;
+$border-radius: 10px;
+$border-color: #404373;
+$primary-color2: #2C55FF;
+$text-primary: #3E427E;
+$btn-gradient-start: #5FADFF;
+$btn-gradient-end: #86C1FF;
+
+/* make the customizations */
+$theme-colors: (
+    primary: #2D3166,
+    primaryLight: #B1E1FF,
+    primaryMid: #5FADFF,
+    primaryDark: #3B82FF,
+    primaryShadow: rgba(45,49,102,0.3),
+    secondary: #FAB445,
+    info: #2552a5,
+    danger: #ce4353,
+    warning: #a0931b,
+    // CUSTOM STARTS HERE
+    primary2: $primary-color2,
+    bg: $body-bg,
+    // nav: $nav-bg,
+    header: $header,
+    // panel: $panel-bg,
+    white: #ffffff,
+    textPrimary: $text-primary
+);

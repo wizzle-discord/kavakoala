@@ -1,0 +1,13 @@
+.btn-gradient {
+  background: linear-gradient(72.48deg, $btn-gradient-start 0%, $btn-gradient-end 100%);
+  &:hover {
+    background: none;
+  }
+}
+
+.my-btn {
+  border-radius: $border-radius !important;
+  width: 280px;
+  height: 67px;
+  font-size: 20px !important;
+}

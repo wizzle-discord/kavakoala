@@ -1,0 +1,21 @@
+@import './Theme.scss';
+@import 'src/components/Layout/Layout.styles.scss';
+@import 'src/components/shared/shared.styles.scss';
+@import 'src/components/Home/Home.styles.scss';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.App {
+  text-align: center;
+  height: 100vh;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  font-size: 48px !important;
+  font-weight: 700 !important;
+}
+// OVERRIDE BOOSTRAP
+
+// Import last to apply custom colors
+@import "~bootstrap/scss/bootstrap";

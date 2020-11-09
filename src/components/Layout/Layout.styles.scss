@@ -1,0 +1,34 @@
+.topnav {
+  height: 80px;
+  white-space: nowrap;
+
+  .mascot-logo {
+    position: relative;
+    svg {
+      height: 80px;
+      position: absolute;
+      left: 0px;
+      top: -7px;
+    }
+  }
+}
+
+.footer {
+  min-height: 408px;
+  background: url('/img/pixel_pattern.png');
+  h4 {
+    font-weight: 600;
+  }
+  a {
+    color: $body-color;
+  }
+  .footer-col {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 576px) {  
+ .footer {
+   display: none !important;
+ }
+}

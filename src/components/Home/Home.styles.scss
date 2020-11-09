@@ -1,0 +1,33 @@
+// INTRO
+.intro {
+  background: url('/img/pixel_pattern.png');
+  min-height: 800px;
+  .intro-btns {
+    justify-content: space-around;
+  }
+}
+
+.bulletin {
+  padding: 34px;
+  img {
+    margin-bottom: 3px;
+  }
+}
+
+.features {
+  min-height: 977px;
+  color: $text-primary;
+  .features-card-body {
+    max-width: 1300px;
+  }
+}
+
+.product {
+  background: $white;
+  min-height: 977px;
+  color: $text-primary;
+  text-align: left;
+  .product-description {
+    text-align: left;
+  }
+}

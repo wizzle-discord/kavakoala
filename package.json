@@ -1,0 +1,49 @@
+{
+  "name": "kavakoala",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "1.2.31",
+    "@fortawesome/free-brands-svg-icons": "5.15.0",
+    "@fortawesome/free-solid-svg-icons": "5.15.0",
+    "@fortawesome/react-fontawesome": "0.1.11",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/bootstrap": "^5.0.0",
+    "@types/react-bootstrap": "^0.32.24",
+    "@typescript-eslint/eslint-plugin": "^4.6.1",
+    "@typescript-eslint/parser": "^4.6.1",
+    "bootstrap": "^4.5.3",
+    "eslint-plugin-react": "^7.21.5",
+    "node-sass": "4.14.1",
+    "react": "^16.13.1",
+    "react-bootstrap": "^1.4.0",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.3",
+    "typescript": "^4.0.5"
+  },
+  "scripts": {
+    "deploy": "react-scripts build; rm -rf dist_OLD; mv dist dist_OLD; mv build dist",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint ./src/ --ext .ts,tsx --fix"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

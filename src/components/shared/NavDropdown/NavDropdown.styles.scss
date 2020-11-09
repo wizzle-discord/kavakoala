@@ -1,0 +1,14 @@
+.nav-dropdown-text {
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+  width: 90%;
+  min-width: 105px;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+.nav-dropdown-icon {
+  display: inline-block;
+  position: absolute;
+  right: 5px;
+}
