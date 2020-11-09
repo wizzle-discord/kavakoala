@@ -7,11 +7,11 @@ const Intro = () => (
   <Row className='intro bg-header pt-5 pb-5'>
     <Col xs='auto' className={ 'm-auto align-self-center text-center' }>
       <h1>Hi! We sell Kava!</h1>
-      <Row>Enjoy <a className='text-secondary mr-1 ml-1' href="#free">free shipping with tracking </a> worldwide and <a className='text-secondary ml-1' href="#refunds">full refunds!</a></Row>
-      <Row>We accept payments by <a className='text-secondary ml-1' href="#visa">VISA, Mastercard, and Bitcoin.</a></Row>
-      <Row className='intro-btns mt-5 mb-2'>
-        <Button variant={'primary'} className='btn-gradient'>Buy Kava</Button>
-        <Button variant={'outline-white'}>Order Sample Pack</Button>
+      <Col>Enjoy <a className='text-secondary mr-1 ml-1' href="#free">free shipping with tracking </a> worldwide and <a className='text-secondary ml-1' href="#refunds">full refunds!</a></Col>
+      <Col>We accept payments by <a className='text-secondary ml-1' href="#visa">VISA, Mastercard, and Bitcoin.</a></Col>
+      <Row className='intro-btns mt-5'>
+        <Button variant={'primary'} className='btn-gradient mb-3'>Buy Kava</Button>
+        <Button variant={'outline-white'} className='mb-3'>Order Sample Pack</Button>
       </Row>
       <Row>
         <Col>
