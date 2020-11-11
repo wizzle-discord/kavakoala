@@ -3,7 +3,7 @@ import FormControl from 'react-bootstrap/FormControl';
 import InputGroup from 'react-bootstrap/InputGroup';
 import { FormControlProps } from 'react-bootstrap/lib/FormControl';
 import BigNumber from 'bignumber.js';
-import Form from 'react-bootstrap/form';
+import Form from 'react-bootstrap/Form';
 // import Col from 'react-bootstrap/Col';
 
 interface Props extends Omit<FormControlProps, 'onChange'> {
