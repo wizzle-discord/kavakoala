@@ -1,0 +1,43 @@
+.input-group.outlined:not(.required) {
+  border: 1px $body-bg solid;
+  border-radius: $border-radius;
+  &:hover {
+    border: 1px $body-bg solid;
+  }
+}
+
+.input-group.outlined.required, .input-group.outlined.focus.required {
+  border: 1px theme-color('danger') solid;
+  border-radius: $border-radius;
+  &:hover {
+    border: 1px theme-color('danger') solid;
+  }
+}
+
+.input-group.outlined.focus:not(.required) {
+  border: 1px $body-bg solid;
+  border-radius: $border-radius;
+}
+
+.input-group.underlined {
+  border: 1px solid transparent;
+  border-bottom-color: $body-bg;
+  &:hover {
+    border-bottom-color: $body-bg;
+  }
+} 
+
+input {
+  &:active, &:focus {
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
+    border: none !important;
+  }
+  -moz-appearance: textfield;
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}

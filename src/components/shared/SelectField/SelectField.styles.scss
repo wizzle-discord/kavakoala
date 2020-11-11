@@ -1,0 +1,39 @@
+.selectfield {
+  select {
+    padding-right: 30px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    border-top-right-radius: $btn-border-radius !important;
+    border-bottom-right-radius: $btn-border-radius !important;
+    &:active, &:focus {
+      border: 1px theme-color('primary') solid;
+      border-radius: $btn-border-radius;
+      box-shadow: 0 0 0 2px theme-color('primaryShadow');
+    }
+  }
+
+  .select-arrow {
+    position: absolute;
+    right: 10px;
+    z-index: 99;
+    line-height: 38px;
+  }
+
+  .input-group.outlined {
+    border: 1px theme-color('inputBorder') solid;
+    border-radius: $btn-border-radius;
+    &:hover {
+      border: 1px theme-color('primary') solid;
+    }
+  }
+  
+  .input-group.underlined {
+    border: 1px solid transparent;
+    border-bottom-color: theme-color('inputBorder');
+    &:hover {
+      border-bottom-color: theme-color('primary');
+    }
+  } 
+}

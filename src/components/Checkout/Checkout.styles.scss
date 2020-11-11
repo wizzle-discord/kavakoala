@@ -1,0 +1,38 @@
+.checkout {
+  color: $text-secondary;
+  font-size: 14px;
+  .form-control {
+    background-color: $input-bg !important;
+    border: none !important;
+  }
+  .form-row {
+    margin-bottom: 10px;
+  }
+  h5 {
+    font-size: 20px;
+    font-weight: 500;
+    color: $text-primary;
+    text-align: left;
+  }
+  .checkout-body {
+    border-radius: $border-radius;
+    margin-bottom: 50px;
+  }
+  .checkout-header {
+    border-bottom: 1px solid $body-bg2;
+  }
+  .checkout-product {
+    text-align: left;
+  }
+  .btn {
+    height: 50px;
+    width: 146px;
+    border-radius: $btn-border-radius !important;
+  }
+  .btn-outline-primary {
+    border: 2px solid $text-secondary;
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+}

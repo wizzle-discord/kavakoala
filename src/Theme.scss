@@ -3,11 +3,15 @@
 
 $header: #21255C;
 $body-bg: #F4F8FF;
+$body-bg2: #E9EDF5;
 $body-color: #ffffff;
 $border-radius: 10px;
+$btn-border-radius: 5px;
 $border-color: #404373;
+$input-bg: #EDF1F4;
 $primary-color2: #2C55FF;
 $text-primary: #3E427E;
+$text-secondary: #8688A2;
 $btn-gradient-start: #5FADFF;
 $btn-gradient-end: #86C1FF;
 
@@ -25,9 +29,16 @@ $theme-colors: (
     // CUSTOM STARTS HERE
     primary2: $primary-color2,
     bg: $body-bg,
+    bg2: $body-bg2,
+    input: $input-bg,
     // nav: $nav-bg,
     header: $header,
     // panel: $panel-bg,
     white: #ffffff,
-    textPrimary: $text-primary
+    textPrimary: $text-primary,
+    textSecondary: $text-secondary,
 );
+
+.btn-secondary {
+    color: $body-color !important;
+}
