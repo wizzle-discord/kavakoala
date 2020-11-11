@@ -11,20 +11,20 @@ interface StepProps {
 }
 
 const ProductItem = ({ item, onSelect }: any) => (
-  <Col xs={'auto'} className='pl-0 checkout-product'>
+  <Col xs={'auto'} className='checkout-product'>
     {item.product.name}
     <SelectField
       value={item.qty.toString()}
       onChange={(newQty: string) => onSelect(newQty, item.product.id)}
       items={[
         {label: '40 Pills', value: '40'},
-        {label: '200000000 Pills', value: '200'},
+        {label: '200 Pills', value: '200'},
       ]}
       hasBorder />
   </Col>
 )
 
-const ShippingItem = ({ address, ...props }: any) => {
+const ShippingForm = ({ address, ...props }: any) => {
   const onChange = (data: Partial<CustomerAddress>) => {
     props.onChange({ address: {
       ...address,
@@ -33,21 +33,20 @@ const ShippingItem = ({ address, ...props }: any) => {
   }
   
   return (
-  <Form>
+  <Form className='mt-4'>
+    <h5>Contact</h5>
+    <Form.Row className='mb-4'>
+      <Col>
+        <Form.Control placeholder="Email" value={address.email} onChange={ e => onChange({ email: e.target.value })} />
+      </Col>
+    </Form.Row>
+    <h5>Shipping</h5>
     <Form.Row>
       <Col>
         <Form.Control placeholder="First Name" value={address.firstName} onChange={ e => onChange({ firstName: e.target.value })} />
       </Col>
       <Col>
         <Form.Control placeholder="Last Name" value={address.lastName} onChange={ e => onChange({ lastName: e.target.value })} />
-      </Col>
-    </Form.Row>
-    <Form.Row>
-      <Col>
-        <Form.Control placeholder="Email" value={address.email} onChange={ e => onChange({ email: e.target.value })} />
-      </Col>
-      <Col>
-        <Form.Control placeholder="Enter email again" value={address.emailConfirm} onChange={ e => onChange({ emailConfirm: e.target.value })} />
       </Col>
     </Form.Row>
     <Form.Row>
@@ -92,15 +91,14 @@ const CheckoutStep1 = ({ cart, ...props }: StepProps) => {
   return (
     <>
     <Row>
-      <h5>Products</h5> {cart.coupon}
+      <Col>
+        <h5>Products</h5> {cart.coupon}
+      </Col>
     </Row>
     <Row>
       {cart.items.map( (item, i) => <ProductItem key={i} item={item} onSelect={onSelect} />)}
     </Row>
-    <Row className='mt-4'>
-      <h5>Shipping</h5>
-    </Row>
-    <ShippingItem address={cart.address} onChange={props.onChange} />
+    <ShippingForm address={cart.address} onChange={props.onChange} />
     </>
   );
 }

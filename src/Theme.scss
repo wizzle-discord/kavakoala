@@ -5,13 +5,14 @@ $header: #21255C;
 $body-bg: #F4F8FF;
 $body-bg2: #E9EDF5;
 $body-color: #ffffff;
-$border-radius: 10px;
+$border-radius: 5px;
 $btn-border-radius: 5px;
 $border-color: #404373;
 $input-bg: #EDF1F4;
 $primary-color2: #2C55FF;
 $text-primary: #3E427E;
 $text-secondary: #8688A2;
+$input-placeholder-color: $text-secondary;
 $btn-gradient-start: #5FADFF;
 $btn-gradient-end: #86C1FF;
 
@@ -23,6 +24,7 @@ $theme-colors: (
     primaryDark: #3B82FF,
     primaryShadow: rgba(45,49,102,0.3),
     secondary: #FAB445,
+    inactive: #D8D5DD,
     info: #2552a5,
     danger: #ce4353,
     warning: #a0931b,
@@ -41,4 +43,9 @@ $theme-colors: (
 
 .btn-secondary {
     color: $body-color !important;
+}
+
+.btn-inactive {
+    color: $text-secondary !important;
+    opacity: 0.5;
 }

@@ -1,12 +1,14 @@
 export interface Product {
   id: number
   name: string
+  price: number
 }
 
 export interface CcPaymentInfo {
   name: string
-  number: number
-  ccv: number
+  expiresAt: string
+  number: string
+  ccv: string
 }
 
 export interface BtcPaymentInfo {
@@ -31,14 +33,16 @@ export interface CustomerAddress {
   country: Country
 }
 
+export interface CartItem {
+  product: Product
+  qty: number
+}
 export type PaymentMethod = 'Bitcoin' | 'Credit Card'
 export interface Cart {
-  items: {
-    product: Product
-    qty: number
-  }[]
+  items: CartItem[]
   coupon: string
   paymentMethod: PaymentMethod
   paymentInfo: BtcPaymentInfo|CcPaymentInfo
   address: CustomerAddress
+  totalCost: number
 }

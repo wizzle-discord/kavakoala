@@ -9,8 +9,10 @@ interface FooterProps {
 }
 const Footer = ({ activeTab, onTab }: FooterProps) => (
   <Row className='p-4 checkout-footer'>
-    <Col>Cancel</Col>
-    <Col xs='auto'>
+    <Col xs={6} className='p-0 align-self-center'>
+      <a href='#test' className='text-textPrimary'>Cancel</a>
+    </Col>
+    <Col>
       <NavBtns activeTab={activeTab} onTab={onTab} />
     </Col>
   </Row>

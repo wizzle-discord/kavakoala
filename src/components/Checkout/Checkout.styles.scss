@@ -1,6 +1,13 @@
 .checkout {
   color: $text-secondary;
   font-size: 14px;
+
+  .checkout-col {
+    max-width: 1194px !important;
+  }
+  .checkout-nav-btns {
+    justify-content: flex-end;
+  }
   .form-control {
     background-color: $input-bg !important;
     border: none !important;
@@ -8,26 +15,84 @@
   .form-row {
     margin-bottom: 10px;
   }
+  .p-4 {
+    padding: 30px !important;
+  }
+  .mb-4 {
+    margin-bottom: 30px;
+  }
   h5 {
     font-size: 20px;
     font-weight: 500;
     color: $text-primary;
     text-align: left;
+    margin-bottom: 18px;
+  }
+  .checkout-container {
+    border-radius: $border-radius;
   }
   .checkout-body {
-    border-radius: $border-radius;
-    margin-bottom: 50px;
+    min-height: 558px;
   }
   .checkout-header {
     border-bottom: 1px solid $body-bg2;
+    text-align: left;
+    svg.step-completed {
+      filter: invert(67%) sepia(48%) saturate(575%) hue-rotate(353deg) brightness(102%) contrast(96%);
+      g {
+        opacity: 1 !important;
+      }
+    }
+    svg.active {
+      g {
+        opacity: 1 !important;
+      }
+    }
+  }
+  .checkout-footer {
+    border-top: 1px solid $body-bg2;
+    text-align: left;
   }
   .checkout-product {
     text-align: left;
   }
+  .checkout-order-summary {
+    text-align: left;
+  }
+  .checkout-order-summary-total {
+    line-height: 49px;
+    text-align: right;
+    span {
+      font-size: 16px;
+    }
+  }
+  .checkout-order-summary-item {
+    border-bottom: 1px solid $body-bg2;
+    height: 40px;
+  }
+
+  .checkout-payment {
+    .btn {
+      height: 46px;
+    }
+  }
+  .summary-text-field {
+    color: $text-primary;
+    font-size: 16px;
+  }
+  .summary-text-label {
+    text-align: right;
+    height: 31px;
+    color: $text-secondary;
+    font-size: 16px;
+  }
+  .summary-warning {
+    color: $secondary;
+    font-size: 14px;
+  }
   .btn {
     height: 50px;
     width: 146px;
-    border-radius: $btn-border-radius !important;
   }
   .btn-outline-primary {
     border: 2px solid $text-secondary;

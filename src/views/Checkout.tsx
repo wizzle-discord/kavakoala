@@ -2,7 +2,7 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import { TopNav, Footer } from 'components/Layout';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
-import { BtcPaymentInfo, Cart, CustomerAddress } from 'interfaces';
+import { Cart, CcPaymentInfo, CustomerAddress } from 'interfaces';
 import CheckoutContainer from 'components/Checkout/Checkout';
 
 interface CheckoutProps extends RouteComponentProps<any> {
@@ -14,11 +14,12 @@ interface CheckoutState {
 }
 
 const defaultCart: Cart = {
-  items: [{ qty: 40, product: { id: 1, name: 'Kava ' }}],
+  items: [{ qty: 40, product: { id: 1, name: 'Kava ', price: 1 }}],
   coupon: '',
-  paymentMethod: 'Bitcoin',
-  paymentInfo: {} as BtcPaymentInfo,
-  address: { firstName: '', lastName: '' } as CustomerAddress
+  paymentMethod: 'Credit Card',
+  paymentInfo: { number: '', name: '', ccv: '', expiresAt: '' } as CcPaymentInfo,
+  address: { firstName: '', lastName: '' } as CustomerAddress,
+  totalCost: 40
 };
 
 class Checkout extends React.Component<CheckoutProps, CheckoutState> {
@@ -30,12 +31,19 @@ class Checkout extends React.Component<CheckoutProps, CheckoutState> {
   }
 
   onChange = (data: Partial<Cart>) => {
-    this.setState(prevState => ({
-      cart: {
-        ...prevState.cart,
-        ...data
+    const cart = { 
+      ...data,
+      ...this.state.cart
+    };
+    // Recalculate total if changed
+    if (data.items) {
+      let qty = 0;
+      for (const item of cart.items) {
+        qty += item.qty * item.product.price
       }
-    }));
+      cart.totalCost = qty;
+    }
+    this.setState({ cart });
   }
 
   render () {

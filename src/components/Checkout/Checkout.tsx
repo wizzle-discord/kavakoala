@@ -28,29 +28,29 @@ const CheckoutContainer = ({ cart, onChange }: CheckoutProps) => {
 
   return (
   <Row className='bg-bg2 justify-content-center checkout'>
-    <Col lg={8} sm={12} md={11}>
-    <Row className='mt-5 mb-4 justify-content-center'>
-      <SvgPaymentMethod />
-    </Row>
-    <Row>
-      <h6>
-      <SvgLock /> Secure Checkout
-      </h6>
-    </Row>
-    <Row className='bg-white checkout-body mb-5'>
-      <Col>
-        <Header activeTab={activeTab} onTab={onTab}/>
-        <Row className='p-4'>
-          <Col xs={8}>
-            <TabComponent cart={cart} onChange={onChange} />
-          </Col>
-          <Col xs={4}>
-            <OrderSummary cart={cart} />
-          </Col>
-        </Row>
-        <Footer activeTab={activeTab} onTab={onTab}/>
-      </Col>
-    </Row>
+    <Col className='checkout-col'>
+      <Row className='mt-5 mb-4 justify-content-center'>
+        <SvgPaymentMethod />
+      </Row>
+      <Row>
+        <h6>
+        <SvgLock /> Secure Checkout
+        </h6>
+      </Row>
+      <Row className='bg-white checkout-container mb-5'>
+        <Col>
+          <Header activeTab={activeTab} onTab={onTab}/>
+          <Row className='p-4 checkout-body'>
+            <Col className='pl-0' lg={7} sm={12}>
+              <TabComponent cart={cart} onChange={onChange} onTab={onTab}/>
+            </Col>
+            <Col className='pr-0' lg={5} sm={12}>
+              <OrderSummary items={cart.items} totalCost={cart.totalCost} />
+            </Col>
+          </Row>
+          <Footer activeTab={activeTab} onTab={onTab}/>
+        </Col>
+      </Row>
     </Col>
    
   </Row>

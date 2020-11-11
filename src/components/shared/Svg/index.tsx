@@ -4,3 +4,6 @@ export { ReactComponent as SvgNavMascot } from 'assets/svg/nav_mascot.svg';
 export { ReactComponent as SvgMascot } from 'assets/svg/Mascot_Transperant.svg';
 export { ReactComponent as SvgPaymentMethod } from 'assets/svg/payment-methods.svg';
 export { ReactComponent as SvgLock } from 'assets/svg/lock.svg';
+export { ReactComponent as SvgStep1 } from 'assets/svg/Step1_Shipping.svg';
+export { ReactComponent as SvgStep2 } from 'assets/svg/Step2_Payment.svg';
+export { ReactComponent as SvgStep3 } from 'assets/svg/Step3_Confirmation.svg';

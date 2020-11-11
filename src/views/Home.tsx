@@ -13,7 +13,7 @@ interface HomeProps extends RouteComponentProps<any> {
 }
 
 const Home = (_props: HomeProps) => (
-  <Container fluid className="App">
+  <Container fluid className="home">
     <TopNav />
     <Intro />
     <Bulletin />
