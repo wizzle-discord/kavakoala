@@ -32,8 +32,8 @@ class Checkout extends React.Component<CheckoutProps, CheckoutState> {
 
   onChange = (data: Partial<Cart>) => {
     const cart = { 
+      ...this.state.cart,
       ...data,
-      ...this.state.cart
     };
     // Recalculate total if changed
     if (data.items) {

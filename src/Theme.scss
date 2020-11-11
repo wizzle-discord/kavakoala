@@ -1,6 +1,8 @@
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 
+$primary: #2D3166;
+$secondary: #FAB445;
 $header: #21255C;
 $body-bg: #F4F8FF;
 $body-bg2: #E9EDF5;
@@ -18,12 +20,12 @@ $btn-gradient-end: #86C1FF;
 
 /* make the customizations */
 $theme-colors: (
-    primary: #2D3166,
+    primary: $primary,
     primaryLight: #B1E1FF,
     primaryMid: #5FADFF,
     primaryDark: #3B82FF,
     primaryShadow: rgba(45,49,102,0.3),
-    secondary: #FAB445,
+    secondary: $secondary,
     inactive: #D8D5DD,
     info: #2552a5,
     danger: #ce4353,

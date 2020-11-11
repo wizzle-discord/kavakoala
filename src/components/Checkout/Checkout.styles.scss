@@ -7,6 +7,9 @@
   }
   .checkout-nav-btns {
     justify-content: flex-end;
+    .btn:first-of-type {
+      opacity: 0.5;
+    }
   }
   .form-control {
     background-color: $input-bg !important;
